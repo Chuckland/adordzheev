@@ -8,17 +8,164 @@
             name="description"
             content="Tech product designer and manager. Дизайнер и менеджер ИТ-продуктов."
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
         <style>
-            html, body {
+            html,
+            body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                font-size: 16px;
+                font-family: "Lora", serif;
+                color: #222;
+            }
+            body {
+                padding: 10vh 10vw;
+            }
+            a,
+            a:visited,
+            a:hover {
+                color: inherit;
+                text-decoration: none;
+                box-sizing: border-box;
+                border-bottom: solid 1px #a2bb16;
+            }
+            a.no-decoration {
+                border-bottom: none;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                display: flex;
+                flex-wrap: wrap-reverse;
+                gap: 16px;
+            }
+            h1 {
+                flex-grow: 1;
+                font-style: italic;
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                font-weight: normal;
+                margin: 0;
+                padding: 0;
+                color: #86af25;
             }
             .container {
-                width: 100vw;
-                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10vh;
+            }
+            .photo {
+                max-width: 178px;
+            }
+            .list {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+                position: relative;
+                box-sizing: border-box;
+            }
+            .list__item {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                flex-wrap: wrap;
+                position: relative;
+                padding-left: 200px;
+            }
+            .list__item-text {
+                max-width: 720px;
+            }
+            .list__item-outer {
+                position: absolute;
+                left: 0;
+                font-style: italic;
+                font-size: 4rem;
+                color: #d6d6d6;
+            }
+            .list__line-point-start,
+            .list__line-point-end {
+                left: 166px;
+            }
+            .list__line-point-start {
+                position: absolute;
+                top: 15px;
+            }
+            .list__line-point-end {
+                position: absolute;
+                bottom: 125px;
+            }
+            .list__line {
+                position: absolute;
+                display: block;
+                width: 1px;
+                background-color: #e5e5e5;
+                top: 20px;
+                bottom: 130px;
+                left: 170px;
+            }
+            footer {
+                display: flex;
+                gap: 24px;
+                padding-left: 200px;
+                margin-bottom: 48px;
+            }
+            @media screen and (max-width: 800px) {
+                body {
+                    padding: 4vh 6vw;
+                }
+                h1 {
+                    font-size: 2rem;
+                    line-height: 2.75rem;
+                }
+                .container {
+                    gap: 6vh;
+                }
+                .photo {
+                    max-width: 120px;
+                }
+                .list {
+                    gap: 32px;
+                }
+                .list__item {
+                    padding-left: 24px;
+                    gap: 0;
+                }
+                .list__item-outer {
+                    position: relative;
+                    font-size: 1.5rem;
+                }
+                .list__line {
+                    left: 0;
+                    top: 20px;
+                    bottom: 340px;
+                }
+                .list__line-point-start,
+                .list__line-point-end {
+                    left: -4px;
+                }
+                .list__line-point-start {
+                    top: 16px;
+                }
+                .list__line-point-end {
+                    bottom: 340px;
+                }
+                footer {
+                    padding-left: 24px;
+                }
             }
         </style>
+
         <!-- Google tag (gtag.js) -->
         <script
             async
@@ -35,12 +182,140 @@
     </head>
     <body>
         <div class="container">
-            <embed
-                src="data/adordzheev-cv.pdf"
-                type="application/pdf"
-                width="100%"
-                height="100%"
-            />
+            <header>
+                <h1>
+                    Hi, I’m Anton Dordzheev <br />
+                    Tech product designer and manager <br />
+                    33 years old
+                </h1>
+                <img class="photo" src="data/photo.jpg" alt="Photo" />
+            </header>
+            <main>
+                <ul class="list">
+                    <div class="list__line"></div>
+                    <svg
+                        class="list__line-point-start"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 0L11.0347 0C11.0347 0 11.0305 0.95166 11.0305 1.45166C9.84444 1.46719 6.53467 1.47125 5.53467 5.47125C5.14706 6.79619 5.03052 9.93776 5.03052 11.9713C4.62892 11.9974 4 11.9713 4 11.9713L4 2.15166C2.27953 2.15166 0 2.45166 0 2.45166L0 0Z"
+                            fill="#E5E5E5"
+                        />
+                    </svg>
+                    <svg
+                        class="list__line-point-end"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 11.9829L11.0347 11.9829C11.0347 11.9829 11.0305 11.0313 11.0305 10.5313C9.84444 10.5157 6.53467 10.5117 5.53467 6.51166C5.14706 5.18672 5.03052 2.04515 5.03052 0.0116425C4.62892 -0.0144463 4 0.0116425 4 0.0116425L4 9.83125C2.27953 9.83125 0 9.53125 0 9.53125L0 11.9829Z"
+                            fill="#E5E5E5"
+                        />
+                    </svg>
+
+                    <li class="list__item">
+                        <span class="list__item-outer">2023</span>
+                        <span class="list__item-text">
+                            I'm open to&nbsp;work as a&nbsp;product designer.
+                            Let's build a&nbsp;great product together.
+                        </span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-outer">2021</span>
+                        <span class="list__item-text">
+                            Product manager of&nbsp;<a href="" target="_blank"
+                                >Kontur.Kedo</a
+                            >. The right hand of&nbsp;founder and&nbsp;Jack
+                            of&nbsp;all&nbsp;trades. A startup for working with
+                            HR&nbsp;documents was founded in 2020. It had
+                            ×10&nbsp;growth in&nbsp;the&nbsp;second year
+                            and&nbsp;×4&nbsp;growth in&nbsp;the&nbsp;third year.
+                        </span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-outer">2020</span>
+                        <span class="list__item-text">
+                            Business and customer development researcher.
+                            Researched ECM systems in&nbsp;Russia, looked
+                            for&nbsp;undiscovered profitable area.
+                        </span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-outer">2018</span>
+                        <span class="list__item-text">
+                            Manager of
+                            <a href="" target="_blank">Kontur.Retail</a>
+                            developer team. Tried to be a&nbsp;manager
+                            in&nbsp;the&nbsp;team that wanted to&nbsp;be
+                            <a href="" target="_blank"
+                                >a&nbsp;teal organization</a
+                            >. Unforgettable.
+                        </span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-outer">2016</span>
+                        <span class="list__item-text">
+                            Manager of&nbsp;Diadoc developer team. Helped around
+                            30&nbsp;people with different roles such
+                            as&nbsp;designers, UX&nbsp;researchers, analytics,
+                            front-end and&nbsp;back-end engineers,
+                            QA&nbsp;specialists develop and deliver
+                            the&nbsp;service with hundreds of&nbsp;thousands
+                            of&nbsp;users and&nbsp;millions transactions every
+                            day.
+                        </span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-outer">2011</span>
+                        <span class="list__item-text">
+                            User interface designer at&nbsp;<a
+                                href=""
+                                target="_blank"
+                                >Kontur</a
+                            >. Made <a href="" target="_blank">Diadoc</a>,
+                            a&nbsp;service for&nbsp;signing and&nbsp;exchanging
+                            electronic documents between companies. Today Diadoc
+                            is&nbsp;among the&nbsp;top three services
+                            in&nbsp;its field in&nbsp;Russia.
+                        </span>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <a
+                    class="no-decoration"
+                    href="https://github.com/Chuckland"
+                    target="_blank"
+                >
+                    <svg
+                        width="42"
+                        height="41"
+                        viewBox="0 0 42 41"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20.8647 0C9.32707 0 0 9.39583 0 21.0198C0 30.3114 5.97618 38.1766 14.2667 40.9603C15.3033 41.1696 15.6829 40.508 15.6829 39.9515C15.6829 39.4642 15.6488 37.7939 15.6488 36.0535C9.8447 37.3066 8.63605 33.5478 8.63605 33.5478C7.7033 31.1117 6.32126 30.4856 6.32126 30.4856C4.42159 29.198 6.45964 29.198 6.45964 29.198C8.56687 29.3372 9.67259 31.3556 9.67259 31.3556C11.5377 34.557 14.543 33.6525 15.7521 33.0955C15.9247 31.7383 16.4777 30.7987 17.065 30.2768C12.4358 29.7895 7.56536 27.9799 7.56536 19.9059C7.56536 17.6091 8.3939 15.7299 9.70675 14.2684C9.49962 13.7465 8.774 11.5885 9.91431 8.70012C9.91431 8.70012 11.676 8.1432 15.6483 10.8577C17.349 10.3976 19.1029 10.1636 20.8647 10.1616C22.6265 10.1616 24.4223 10.4055 26.0807 10.8577C30.0534 8.1432 31.8152 8.70012 31.8152 8.70012C32.9555 11.5885 32.2294 13.7465 32.0223 14.2684C33.3697 15.7299 34.1641 17.6091 34.1641 19.9059C34.1641 27.9799 29.2936 29.7545 24.6299 30.2768C25.3901 30.9379 26.0461 32.1906 26.0461 34.1744C26.0461 36.9931 26.0119 39.2554 26.0119 39.9511C26.0119 40.508 26.392 41.1696 27.4282 40.9607C35.7187 38.1761 41.6949 30.3114 41.6949 21.0198C41.729 9.39583 32.3678 0 20.8647 0Z"
+                            fill="#24292F"
+                        />
+                    </svg>
+                </a>
+                <a
+                    class="no-decoration"
+                    href="https://www.linkedin.com/in/dordzheev-anton-737396a0/"
+                    target="_blank"
+                    ><img src="data/linkedin.png" alt="LinkedIn"
+                /></a>
+            </footer>
         </div>
     </body>
 </html>
