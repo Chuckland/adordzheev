@@ -183,6 +183,38 @@
             gtag("js", new Date());
             gtag("config", "G-BN08JXE80Q");
         </script>
+        <script>
+            const calculateAge = () => {
+                const currentDate = new Date();
+                const startDate = new Date('1990-02-10');
+
+                let age = currentDate.getFullYear() - startDate.getFullYear();
+
+                const hasBirthdayPassed = (
+                    currentDate.getMonth() > startDate.getMonth() || 
+                    (currentDate.getMonth() === startDate.getMonth() && currentDate.getDate() >= startDate.getDate())
+                );
+
+                if (!hasBirthdayPassed) {
+                    age--;
+                }
+
+                return age;
+            };
+
+            const updateAge = () => {
+                const ageContainer = document.querySelector('#age');
+                if (!ageContainer) {
+                    return;
+                }
+                const age = calculateAge();
+                ageContainer?.textContent = age;
+            };
+
+            document.addEventListener('DOMContentLoaded', (e) => {
+                updateAge();
+            });
+        </script>
     </head>
     <body>
         <div class="container">
@@ -190,7 +222,7 @@
                 <h1>
                     Hi, I’m Anton Dordzheev <br />
                     Tech product designer and manager <br />
-                    33 years old
+                    <span id="age"></span> years old
                 </h1>
                 <img class="photo" src="data/photo.jpg" alt="Photo" />
             </header>
